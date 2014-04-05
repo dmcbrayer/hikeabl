@@ -17,3 +17,19 @@ $jumbotron-bg:                    white;
 .navbar-brand {
      font-weight: bold;
 }
+
+.navbar {
+	margin-bottom: 0px;
+}
+
+.jumbotron {
+	margin-top: 0px;
+	background-image: url(bridge.JPG);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.semitrans {
+	background-color: white;
+	opacity: .8;
+}
