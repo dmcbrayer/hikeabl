@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   
+  get 'users/index'
+
+  get 'users/show'
+
+  get 'index/show'
+
   resources :trips
 
   devise_for :users

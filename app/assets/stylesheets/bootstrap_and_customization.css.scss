@@ -8,7 +8,9 @@ $navbar-default-brand-color:      #c0392b;
 $brand-primary:                   #c0392b;
 $jumbotron-bg:                    white;
 
+
 @import 'bootstrap';
+
 
 .center {
      text-align: center;
@@ -41,5 +43,29 @@ $jumbotron-bg:                    white;
 
 .bigmargin {
 	margin-top: 300px;
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #383838;
+  color: #969696;
+  a {
+    color: #666363;
+    &:hover {
+      color: #121112;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
 }
 
