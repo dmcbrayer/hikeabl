@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
-/*$body-bg:                         #ecf0f1;*/
+$body-bg:                         #ecf0f1;
 $font-family-sans-serif:          'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height:                   45px;
 $navbar-default-bg:               white;
@@ -23,9 +23,9 @@ $jumbotron-bg:                    white;
 	-webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;
 }
 
-.semitrans {
+/*.semitrans {
 	background-color: rgba(255,255,255,.9);
-}
+}*/
 
 
 .jumbotron {
@@ -33,11 +33,11 @@ $jumbotron-bg:                    white;
 }
 
 
-body {
+/*body {
 	background-image: url(bridge.JPG);
 	background-repeat: no-repeat;
 	background-size: 100%;
-}
+}*/
 
 .bigmargin {
 	margin-top: 300px;

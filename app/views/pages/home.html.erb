@@ -1,18 +1,38 @@
 
+<% if user_signed_in? %>
+
+	<div class="row">
+		<div class="col-md-8">
+			<%= render 'shared/home' %>
+		</div>
+
+		<div class="col-md-4">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<div class="panel-title">
+						<h1>Gear/Other Stuff</h1>
+					</div>
+				</div>
+				<div class="panel-body">
+				</div>
+			</div>
+		</div>
+	</div>
+
+<% else %>
 
 
+	<div class="jumbotron center semitrans">
+		<h1>Welcome to Hikeabl!</h1>
 
-<div class="jumbotron center semitrans">
-	<h1>Welcome to Hikeabl!</h1>
+		<p>
+		    <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
+		    <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+		</p>
+		  	
+	</div>
 
-	<p>
-	    <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
-	    <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
-	</p>
-	  	
-</div>
-
-
+<% end %>
 
 
 
