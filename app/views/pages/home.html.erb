@@ -10,10 +10,15 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<div class="panel-title">
-						<h1>Gear/Other Stuff</h1>
+						<h1>Your Picture</h1>
 					</div>
 				</div>
 				<div class="panel-body">
+					<% if current_user.avatar? %>
+						<%= image_tag current_user.avatar.url(:medium) %>
+					<% else %>
+						<p>Sorry, no image found</p>
+					<% end %>
 				</div>
 			</div>
 		</div>
@@ -24,6 +29,7 @@
 
 	<div class="jumbotron center semitrans">
 		<h1>Welcome to Hikeabl!</h1>
+		<h3>Where we know what's up</h3>
 
 		<p>
 		    <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>

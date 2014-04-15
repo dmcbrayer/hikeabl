@@ -1,7 +1,7 @@
 class TripsController < ApplicationController
   before_action :set_trip, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
-  #before_action :correct_user, except: [:edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
 
   def index
