@@ -1,14 +1,11 @@
 Rails.application.routes.draw do
   
-  get 'users/index'
 
-  get 'users/show'
-
-  get 'index/show'
 
   resources :trips
 
   devise_for :users
+  resources :users, only: [:index, :show]
   root 'pages#home'
 
 
