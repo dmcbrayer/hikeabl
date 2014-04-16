@@ -16,7 +16,8 @@
         <% @users.each do |user| %>
           <tr>
             <td><%= user.email %></td>
-            <td><%= image_tag user.avatar.url(:thumb) %></td>
+            <td><%= holder_tag'65x65' %></td>
+            <!--<td><%= image_tag user.avatar.url(:thumb) %></td>-->
          
             <td><%= link_to 'Show', user %></td>
           </tr>

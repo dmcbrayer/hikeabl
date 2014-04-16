@@ -4,7 +4,8 @@
 	<div class="panel-heading">
 		<div class="panel-title">
 			<h1><%= @user.email %></h1>
-			<%= image_tag @user.avatar.url(:medium) %>
+			<%= holder_tag '300x300' %>
+			<!--<%= image_tag @user.avatar.url(:medium) %>-->
 		</div>
 	</div>
 	<div class="panel-body">
