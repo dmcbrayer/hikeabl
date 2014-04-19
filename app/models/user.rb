@@ -11,6 +11,9 @@ class User < ActiveRecord::Base
 
 
   has_many :trips
+
+  acts_as_follower
+  acts_as_followable
 end
 
 #Notes on how to set up the structure of this

@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
   
-
-
-  resources :trips
-
-  devise_for :users
-  resources :users, only: [:index, :show]
   root 'pages#home'
 
+  devise_for :users
+
+  resources :users, only: [:index, :show] do
+    post 'follow',   to: 'socializations#follow'
+    post 'unfollow', to: 'socializations#unfollow'
+  end
+  resources :trips
 
   get 'about' => 'pages#about'
 
