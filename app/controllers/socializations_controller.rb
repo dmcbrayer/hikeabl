@@ -3,12 +3,15 @@ class SocializationsController < ApplicationController
 
   def follow
     current_user.follow!(@socializable)
-    render json: { follow: true }
+
+    redirect_to users_path
+    
   end
 
   def unfollow
     current_user.unfollow!(@socializable)
-    render json: { follow: false }
+    
+    redirect_to users_path
   end
 
 private

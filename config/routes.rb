@@ -5,9 +5,11 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users, only: [:index, :show] do
+    #I had to hard code method: :post in the view.  Not sure why this doesn't do it.
     post 'follow',   to: 'socializations#follow'
     post 'unfollow', to: 'socializations#unfollow'
   end
+
   resources :trips
 
   get 'about' => 'pages#about'
