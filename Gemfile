@@ -14,10 +14,11 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'bootstrap-sass'
 gem 'paperclip', github: 'thoughtbot/paperclip'
-gem 'holder_rails'
+gem 'socialization'
 
 group :development, :test do
 	gem 'sqlite3'
+	gem 'holder_rails'
 end
 
 group :production do
