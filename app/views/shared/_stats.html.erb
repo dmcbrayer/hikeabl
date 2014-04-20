@@ -1,0 +1,15 @@
+
+
+<% @user ||= current_user %>
+
+
+
+<ul>
+  <li><strong>Following <%= @user.followees(User).count %></strong></li>
+    
+
+
+  <li><strong><%= @user.followers(User).count %> followers</strong></li>
+</ul>
+    
+
