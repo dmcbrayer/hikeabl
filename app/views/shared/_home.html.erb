@@ -13,7 +13,7 @@
       </thead>
 
       <tbody>
-        <% @trips.each do |trip| %>
+        <% current_user.trips.each do |trip| %>
           <tr>
             <td><%= link_to trip.name, trip %></td>
             <td><%= trip.user.email %></td>

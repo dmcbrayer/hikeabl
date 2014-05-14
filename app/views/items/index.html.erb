@@ -1,0 +1,28 @@
+<% provide(:title, "Items") %>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1>Listing Items</h1>
+  </div>
+  <div class="panel-body">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Description</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @items.each do |item| %>
+          <tr>
+            <td><%= link_to item.name, item %></td>
+            <td><%= item.description %></td>
+            <td><%= link_to 'Show', item %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+   </div>
+  </div>

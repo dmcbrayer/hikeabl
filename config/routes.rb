@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   root 'pages#home'
 
   devise_for :users
@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     post 'unfollow', to: 'socializations#unfollow'
 
   end
+
+  resources :items, only: [:index, :show]
 
   resources :trips
   
