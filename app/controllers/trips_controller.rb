@@ -5,6 +5,7 @@ class TripsController < ApplicationController
 
 
   def index
+    #@trips = current_user.trips.all
     @trips = Trip.all
   end
 

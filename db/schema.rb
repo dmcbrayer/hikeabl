@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140419141355) do
+ActiveRecord::Schema.define(version: 20140514025336) do
 
   create_table "follows", force: true do |t|
     t.string   "follower_type"
@@ -23,6 +23,20 @@ ActiveRecord::Schema.define(version: 20140419141355) do
 
   add_index "follows", ["followable_id", "followable_type"], name: "fk_followables"
   add_index "follows", ["follower_id", "follower_type"], name: "fk_follows"
+
+  create_table "item_subscriptions", force: true do |t|
+    t.integer  "trip_id"
+    t.integer  "item_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "items", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "likes", force: true do |t|
     t.string   "liker_type"
