@@ -15,10 +15,10 @@ gem 'spring',        group: :development
 gem 'bootstrap-sass'
 gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'socialization'
+gem 'holder_rails'
 
 group :development, :test do
 	gem 'sqlite3'
-	gem 'holder_rails'
 end
 
 group :production do
