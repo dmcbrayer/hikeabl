@@ -29,6 +29,16 @@
 			<%= distance_of_time_in_words(@trip.starts_on, @trip.ends_on) %>
 		</p>
 
+		<p>
+			<strong>What did you bring?</strong>
+			<ul>
+				<% @items.each do |item| %>
+					<li><%= item.name %></li>
+				<% end %>
+			</ul>
+		</p>
+
+
 
 		<% if @trip.user == current_user %>
 			<%= link_to 'Edit', edit_trip_path(@trip) %> |

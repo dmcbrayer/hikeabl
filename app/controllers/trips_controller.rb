@@ -5,11 +5,12 @@ class TripsController < ApplicationController
 
 
   def index
-    #@trips = current_user.trips.all
+    
     @trips = Trip.all
   end
 
   def show
+    @items = @trip.items.all
   end
 
   def new
@@ -17,6 +18,7 @@ class TripsController < ApplicationController
   end
 
   def edit
+    @items = Item.all
   end
 
   def create
@@ -34,6 +36,10 @@ class TripsController < ApplicationController
   end
 
   def update
+
+    #set the item ids to an empty array if there's nothing already there
+    params[:trip][:item_ids] ||= []
+
     respond_to do |format|
       if @trip.update(trip_params)
         format.html { redirect_to @trip, notice: 'Trip was successfully updated.' }
@@ -66,6 +72,6 @@ class TripsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def trip_params
-      params.require(:trip).permit(:starts_on, :ends_on, :name, :location)
+      params.require(:trip).permit(:starts_on, :ends_on, :name, :location, {:item_ids => []})
     end
 end

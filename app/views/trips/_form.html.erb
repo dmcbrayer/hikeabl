@@ -32,6 +32,13 @@
       <%= f.date_select :ends_on, class: "form-control" %>
     </div>
 
+    <ul>
+      <% @items.each do |item|%>
+        <li><%= check_box_tag "trip[item_ids][]", item.id, @trip.items.include?(item) %>
+        <%= item.name %></li>
+      <% end %>
+    </ul>
+
     
     <div class="form-group">
       <%= f.submit class: "btn btn-primary" %>
