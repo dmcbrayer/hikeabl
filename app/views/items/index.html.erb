@@ -20,6 +20,7 @@
             <td><%= link_to item.name, item %></td>
             <td><%= item.description %></td>
             <td><%= link_to 'Show', item %></td>
+            <td><%= link_to 'Delete', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
       </tbody>

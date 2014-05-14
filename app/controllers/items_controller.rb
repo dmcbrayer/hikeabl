@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
 
-before_action :set_item, only: :show
+before_action :set_item, only: [:show, :create, :destroy]
 
   def index
   	@items = Item.all
@@ -22,6 +22,14 @@ before_action :set_item, only: :show
       else
         format.html { render action: 'new' }
       end
+    end
+  end
+
+  def destroy
+    @item.destroy
+
+    respond_to do |format|
+      format.html { redirect_to items_path }
     end
   end
 
