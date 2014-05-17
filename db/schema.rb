@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140514025336) do
+ActiveRecord::Schema.define(version: 20140517092220) do
 
   create_table "follows", force: true do |t|
     t.string   "follower_type"
@@ -62,8 +62,8 @@ ActiveRecord::Schema.define(version: 20140514025336) do
 
   create_table "trips", force: true do |t|
     t.integer  "user_id"
-    t.datetime "starts_on"
-    t.datetime "ends_on"
+    t.date     "starts_on"
+    t.date     "ends_on"
     t.string   "name"
     t.string   "location"
     t.datetime "created_at"

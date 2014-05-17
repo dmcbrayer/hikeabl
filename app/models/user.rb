@@ -16,13 +16,3 @@ class User < ActiveRecord::Base
   acts_as_followable
 end
 
-#Notes on how to set up the structure of this
-
-#The trips model should has_many :pieces and the :piece model should automatically 
-#contain all of the suggested equipment that someone should bring on a hike.  The
-#:trips edit and new actions should bring up a checkbox form where the user can select
-#which things they brought on their trip.  The show action should display the things
-#that were packed as a ul.  
-
-#later on, the things model should have an attached image for each thing and the image
-#should act as a checkbox to have better user functionality.

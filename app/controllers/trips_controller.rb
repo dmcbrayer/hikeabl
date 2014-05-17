@@ -15,6 +15,7 @@ class TripsController < ApplicationController
 
   def new
     @trip = current_user.trips.build
+    @items = Item.all
   end
 
   def edit
@@ -22,6 +23,7 @@ class TripsController < ApplicationController
   end
 
   def create
+    @items = Item.all
     @trip = current_user.trips.build(trip_params)
 
     respond_to do |format|
