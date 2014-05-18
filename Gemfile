@@ -16,6 +16,7 @@ gem 'bootstrap-sass'
 gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'socialization'
 gem 'holder_rails'
+gem 'validates_timeliness'
 
 group :development, :test do
 	gem 'sqlite3'

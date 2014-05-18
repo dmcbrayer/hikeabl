@@ -6,14 +6,16 @@ class Trip < ActiveRecord::Base
 	has_many :items, :through => :item_subscriptions
 
 	validates :name, presence: true
-	validate :date_validate
+	validates_date :ends_on, :on_or_after => :starts_on, :on_or_after_message => 'must be on or after starts on date'
 
-	def date_validate
-		if :ends_on < :starts_on
-			errors.add :base, "Your trip can't end before it starts"
-		end
+	#private
 
-	end
+	#def date_validate
+	#	if ends_on < starts_on
+	#		errors.add :base, "Your trip can't end before it starts"
+	#	end
+
+	#end
 
 end
 
