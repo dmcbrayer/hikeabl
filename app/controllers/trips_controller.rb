@@ -38,6 +38,7 @@ class TripsController < ApplicationController
   end
 
   def update
+    @items = Item.all
 
     #set the item ids to an empty array if there's nothing already there
     params[:trip][:item_ids] ||= []
