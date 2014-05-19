@@ -17,6 +17,7 @@ gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'socialization'
 gem 'holder_rails'
 gem 'validates_timeliness'
+gem 'public_activity'
 
 group :development, :test do
 	gem 'sqlite3'
