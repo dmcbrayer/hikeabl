@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'activities/index'
+
   root 'pages#home'
 
   devise_for :users
@@ -13,6 +15,7 @@ Rails.application.routes.draw do
 
   resources :items
   resources :trips
+  resources :activities
   
 
   get 'about' => 'pages#about'
