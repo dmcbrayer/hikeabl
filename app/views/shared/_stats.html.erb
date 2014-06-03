@@ -9,7 +9,7 @@
     
 
 
-  <li><strong><%= @user.followers(User).count %> followers</strong></li>
+  <li><strong><%= pluralize(@user.followers(User).count, "Follower") %></strong></li>
 </ul>
     
 
