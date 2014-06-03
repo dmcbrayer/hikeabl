@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
   
 
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "default_user.png"
+  has_attached_file :avatar, :styles => { :header => "24x24#", :small => "52x52#", :medium => "300x300#", :thumb => "100x100#" }, :default_url => "default_user.png"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
   validates :name, presence: true
 
